@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Link</title>
 
+    <!--
+        在 HTML 5 中，如果使用 link 元素链接到一个样式表，先定义 rel="stylesheet"，然后再定义 type="text/css"，这样就重复了。
+        对于浏览器而言，用不着同时是看到两个属性。
+        浏览器只要看到 rel="stylesheet" 就够了，因为它可以猜出来要链接的是一个 CSS 样式表。
+        所以不用再指定 type 属性了。
+     -->
     <link rel="stylesheet" th:href="@{/css/link.css}">
 
 </head>
