@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>onresize</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    window.onresize = function (e) {
+        console.log('浏览器窗口调整大小时触发')
+        console.log('窗口的高度(不包含工具条与滚动条)', e.target.innerHeight)
+        console.log('窗口的宽度(不包含工具条与滚动条)', e.target.innerWidth)
+
+        console.log('整个窗口的高度', e.target.outerHeight)
+        console.log('整个窗口的宽度', e.target.outerWidth)
+
+        console.log(e)
+    }
+
+</script>
+
+</body>
+</html>

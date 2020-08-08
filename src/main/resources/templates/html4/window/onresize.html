@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh">
+<head>
+    <title>onresize</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    window.onresize = function (e) {
+        console.log('浏览器窗口调整大小时触发')
+        console.log('窗口的高度(不包含工具条与滚动条)', e.target.innerHeight)
+        console.log('窗口的宽度(不包含工具条与滚动条)', e.target.innerWidth)
+
+        console.log('整个窗口的高度', e.target.outerHeight)
+        console.log('整个窗口的宽度', e.target.outerWidth)
+
+        console.log(e)
+    }
+
+</script>
+
+</body>
+</html>
