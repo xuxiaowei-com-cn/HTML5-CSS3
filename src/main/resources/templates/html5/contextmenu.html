@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>contextmenu</title>
+</head>
+<body>
+
+<!-- 目前仅有 Firefox 支持 contextmenu -->
+<div contextmenu="customContextmenu">
+    上下文菜单
+    <menu type="context" id="customContextmenu">
+        <menuitem label="微信分享" onclick="console.log('微信分享')"></menuitem>
+        <menuitem label="微博分享" onclick="console.log('微博分享')"></menuitem>
+    </menu>
+</div>
+
+</body>
+</html>
