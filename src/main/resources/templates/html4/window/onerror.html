@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh">
+<head>
+    <title>onerror</title>
+</head>
+<body>
+
+<button onclick="test()">模拟错误</button>
+
+<script type="text/javascript">
+
+    /**
+     * 在错误发生时运行的脚本
+     * @param message 错误消息（字符串）
+     * @param source 引发错误的脚本的URL（字符串）
+     * @param lineno 发生错误的行号（数值）
+     * @param colno 发生错误的行的列号（数值）
+     * @param error 错误对象（对象）
+     */
+    window.onerror = function (message, source, lineno, colno, error) {
+        console.log('在错误发生时运行的脚本')
+        console.log('错误消息（字符串）', message)
+        console.log('引发错误的脚本的URL（字符串）', source)
+        console.log('发生错误的行号（数值）', lineno)
+        console.log('发生错误的行的列号（数值）', colno)
+        console.log('错误对象（对象）', error)
+    }
+
+</script>
+
+</body>
+</html>
