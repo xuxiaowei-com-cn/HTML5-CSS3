@@ -13,11 +13,20 @@
 <!--
     contenteditable 属性的主要功能是允许用户在线编辑元素中的内容。
  -->
-<ul contenteditable="true">
+<ul contenteditable="true" id="ul-contenteditable">
     <li>列表元素 1</li>
     <li>列表元素 2</li>
     <li>列表元素 3</li>
 </ul>
+
+<script type="text/javascript">
+
+    window.onload = function () {
+        let contenteditable = document.getElementById('ul-contenteditable');
+        console.log('是否可编辑', contenteditable.isContentEditable)
+    }
+
+</script>
 
 </body>
 </html>
