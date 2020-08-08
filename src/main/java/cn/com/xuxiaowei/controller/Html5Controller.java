@@ -23,11 +23,11 @@ public class Html5Controller {
      * @param request  请求
      * @param response 响应
      * @param model    页面中的值
-     * @param page     HTML 4 页面名
+     * @param page     HTML 5 页面名
      * @return 返回 HTML 5 页面的位置
      */
     @RequestMapping("/html5/{page}")
-    public String html4(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
+    public String html5(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
 
         return "html5/" + page;
     }
