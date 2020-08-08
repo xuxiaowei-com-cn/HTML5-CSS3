@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh">
+<head>
+    <title>oninvalid</title>
+</head>
+<body>
+
+<form id="test-form" action="">
+    <label for="age">
+        <input type="number" id="age" name="age" required>
+    </label>
+    <label for="email">
+        <input type="email" id="email" name="email" required>
+    </label>
+
+    <button type="submit">提交</button>
+</form>
+
+<script type="text/javascript">
+
+    document.getElementById('email').oninvalid = function (e) {
+        this.setCustomValidity('请正确输入邮箱！')
+        console.log(this.value)
+        console.log(this)
+        console.log(e)
+    }
+
+    /**
+     * 内容改变时事件（实时监听）
+     * @param e 当前对象
+     */
+    document.getElementById('email').oninput = function (e) {
+        this.setCustomValidity('')
+    }
+
+    /**
+     * 验证失败时事件
+     * @param e 当前对象
+     */
+    document.getElementById('age').oninvalid = function (e) {
+        this.setCustomValidity('请正确输入年龄！')
+        console.log(this.value)
+        console.log(this)
+        console.log(e)
+    }
+
+    /**
+     * 内容改变时事件（实时监听）
+     * @param e 当前对象
+     */
+    document.getElementById('age').oninput = function (e) {
+        this.setCustomValidity('')
+    }
+
+</script>
+
+</body>
+</html>
