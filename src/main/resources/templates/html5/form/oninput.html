@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>oninput</title>
+</head>
+<body>
+
+<form id="test-form" name="test-form">
+    <label for="username">
+        <input type="text" id="username" name="username" oninput="usernameOninput(this)">
+    </label>
+    <label for="password">
+        <input type="text" id="password" name="password">
+    </label>
+</form>
+
+<form id="test-form2" name="test-form2">
+    <label for="username2">
+        <input type="text" id="username2" name="username2">
+    </label>
+    <label for="password2">
+        <input type="text" id="password2" name="password2">
+    </label>
+</form>
+
+<script type="text/javascript">
+
+    /**
+     * 指定 form 的 input 改变监听事件
+     * @param e 当前对象
+     */
+    document.getElementById('test-form2').oninput = function (e) {
+        console.log('test-form2 input 内容发生改变时执行的脚本')
+        console.log('test-form2 input target id', e.target.id)
+        console.log('test-form2 input target name', e.target.name)
+        console.log('test-form2 input target value', e.target.value)
+        console.log('test-form2 input target', e.target)
+        console.log('test-form2 input form id', e.target.form.id)
+        console.log('test-form2 input form name', e.target.form.name)
+        console.log('test-form2 input form', e.target.form)
+        console.log('test-form2 input', e)
+    }
+
+    /**
+     * window input 改变监听事件
+     * @param e 当前对象
+     */
+    window.oninput = function (e) {
+        console.log('window input 内容发生改变时执行的脚本')
+        console.log('window input target id', e.target.id)
+        console.log('window input target name', e.target.name)
+        console.log('window input target value', e.target.value)
+        console.log('window input target', e.target)
+        console.log('window input form id', e.target.form.id)
+        console.log('window input form name', e.target.form.name)
+        console.log('window input form', e.target.form)
+        console.log('window input', e)
+    }
+
+    /**
+     * 指定 input 改变监听事件
+     * @param e 当前对象
+     */
+    function usernameOninput(e) {
+        console.log('input 内容发生改变时执行的脚本')
+        console.log('input id', e.id)
+        console.log('input name', e.name)
+        console.log('input value', e.value)
+        console.log('input', e)
+    }
+
+</script>
+
+</body>
+</html>
