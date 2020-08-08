@@ -32,4 +32,19 @@ public class Html4Controller {
         return "html4/" + page;
     }
 
+    /**
+     * HTML 4 window 相关页面
+     *
+     * @param request  请求
+     * @param response 响应
+     * @param model    页面中的值
+     * @param page     HTML 4 window 相关页面
+     * @return 返回 HTML 4 window 相关页面
+     */
+    @RequestMapping("/html4/window/{page}")
+    public String html4Window(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
+
+        return "html4/window/" + page;
+    }
+
 }
