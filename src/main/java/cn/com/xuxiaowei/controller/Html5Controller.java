@@ -42,7 +42,7 @@ public class Html5Controller {
      * @return 返回 HTML 5 window 相关页面
      */
     @RequestMapping("/html5/window/{page}")
-    public String html4(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
+    public String html5Window(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
 
         return "html5/window/" + page;
     }
