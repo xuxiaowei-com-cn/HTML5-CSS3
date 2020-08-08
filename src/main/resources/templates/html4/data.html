@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh">
+<head>
+    <title>data</title>
+</head>
+<body>
+
+<ul>
+    <li data-animal-type="bird">猫头鹰</li>
+    <li data-animal-type="fish">鲤鱼</li>
+    <li data-animal-type="spider">蜘蛛</li>
+</ul>
+
+<script type="text/javascript">
+
+    window.onload = function () {
+        let lis = document.getElementsByTagName('li');
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i].dataset.animalType)
+        }
+    }
+
+</script>
+
+</body>
+</html>
