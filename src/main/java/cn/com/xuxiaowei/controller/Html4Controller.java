@@ -47,4 +47,19 @@ public class Html4Controller {
         return "html4/window/" + page;
     }
 
+    /**
+     * HTML 4 form 相关页面
+     *
+     * @param request  请求
+     * @param response 响应
+     * @param model    页面中的值
+     * @param page     HTML 4 form 相关页面
+     * @return 返回 HTML 4 form 相关页面
+     */
+    @RequestMapping("/html4/form/{page}")
+    public String html4Form(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
+
+        return "html4/form/" + page;
+    }
+
 }

@@ -47,4 +47,19 @@ public class Html5Controller {
         return "html5/window/" + page;
     }
 
+    /**
+     * HTML 5 form 相关页面
+     *
+     * @param request  请求
+     * @param response 响应
+     * @param model    页面中的值
+     * @param page     HTML 5 form 相关页面
+     * @return 返回 HTML 5 form 相关页面
+     */
+    @RequestMapping("/html5/form/{page}")
+    public String html5Form(HttpServletRequest request, HttpServletResponse response, Model model, @PathVariable("page") String page) {
+
+        return "html5/form/" + page;
+    }
+
 }
