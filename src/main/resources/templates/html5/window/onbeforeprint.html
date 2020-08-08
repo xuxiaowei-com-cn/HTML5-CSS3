@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>onbeforeprint</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    window.onbeforeprint = function (e) {
+        console.log('文档打印之前运行的脚本')
+        console.log('文档就绪后' + e.timeStamp / 1000 + '秒后执行打印')
+    }
+
+</script>
+
+</body>
+</html>
